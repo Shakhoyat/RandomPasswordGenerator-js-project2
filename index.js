@@ -1,8 +1,8 @@
 //Random Password Generator
 
-const passwordlength = 12;
+const passwordlength = 0;
 const includeLowercase = true;
-const includeUppercase = true;
+const includeUppercase = false;
 const includeNumbers = true;
 const includeSymbols = true;
 
