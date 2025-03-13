@@ -1,5 +1,11 @@
 //Random Password Generator
 
+const passwordlength = 12;
+const includeLowercase = true;
+const includeUppercase = true;
+const includeNumbers = true;
+const includeSymbols = true;
+
 function generatePassword(
   passwordlength,
   includeLowercase,
@@ -19,15 +25,21 @@ function generatePassword(
   allowedcharSet += includeNumbers ? numbers : "";
   allowedcharSet += includeSymbols ? symbols : "";
 
-  console.log(allowedcharSet);
-  //return password;
+  if (passwordlength <= 0) {
+    return "Password length should be greater than 0";
+  }
+  if (allowedcharSet === 0) {
+    return "Select atleast one character set";
+  }
+  let random = 0;
+  for (let i = 0; i < passwordlength; i++) {
+    random = Math.floor(Math.random() * allowedcharSet.length);
+    password += allowedcharSet[random];
+
+    return password;
+  }
 }
 
-const passwordlength = 12;
-const includeLowercase = true;
-const includeUppercase = true;
-const includeNumbers = true;
-const includeSymbols = true;
 const res = generatePassword(
   passwordlength,
   includeLowercase,
@@ -35,4 +47,4 @@ const res = generatePassword(
   includeNumbers,
   includeSymbols
 );
-console.log(res);
+console.log(`Generated Password: ${res}`);
