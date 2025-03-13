@@ -35,9 +35,8 @@ function generatePassword(
   for (let i = 0; i < passwordlength; i++) {
     random = Math.floor(Math.random() * allowedcharSet.length);
     password += allowedcharSet[random];
-
-    return password;
   }
+  return password;
 }
 
 const res = generatePassword(
