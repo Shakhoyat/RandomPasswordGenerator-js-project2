@@ -1,10 +1,10 @@
 //Random Password Generator
 
-const passwordlength = 0;
+const passwordlength = 20;
 const includeLowercase = true;
 const includeUppercase = false;
-const includeNumbers = true;
-const includeSymbols = true;
+const includeNumbers = false;
+const includeSymbols = false;
 
 function generatePassword(
   passwordlength,
