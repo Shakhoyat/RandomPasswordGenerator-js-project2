@@ -7,7 +7,20 @@ function generatePassword(
   includeNumbers,
   includeSymbols
 ) {
-  return password;
+  const lowercase = "abcdefghijklmnopqrstuvwxyz";
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numbers = "0123456789";
+  const symbols = "!@#$%^&*()_+";
+  let password = "";
+  let allowedcharSet = "";
+
+  allowedcharSet += includeLowercase ? lowercase : "";
+  allowedcharSet += includeUppercase ? uppercase : "";
+  allowedcharSet += includeNumbers ? numbers : "";
+  allowedcharSet += includeSymbols ? symbols : "";
+
+  console.log(allowedcharSet);
+  //return password;
 }
 
 const passwordlength = 12;
